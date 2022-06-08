@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2d6560a935eb04595f5206a442f184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   upKey: 119
   downKey: 115
 --- !u!50 &235852492
@@ -253,7 +253,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 235852488}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d131d5faa16336548814e6bb377179d1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -280,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452488329}
   - component: {fileID: 452488328}
+  - component: {fileID: 452488330}
   m_Layer: 0
   m_Name: Tembok Bawah
   m_TagString: Untagged
@@ -352,6 +353,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &452488330
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452488327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 139d6bb246d84d94d979ec064393b513, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &651058297
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2d6560a935eb04595f5206a442f184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 5
   upKey: 273
   downKey: 274
 --- !u!50 &651058301
@@ -482,7 +509,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 651058297}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d131d5faa16336548814e6bb377179d1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -592,6 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101785372}
   - component: {fileID: 1101785371}
+  - component: {fileID: 1101785373}
   m_Layer: 0
   m_Name: Tembok Atas
   m_TagString: Untagged
@@ -664,6 +692,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1101785373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101785370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 139d6bb246d84d94d979ec064393b513, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1374526393
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed158d8f078009c49a59f3ba4d39ccc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 4, y: 0}
+  speed: {x: 7, y: 0}
 --- !u!212 &1374526395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -792,7 +846,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1374526393}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 139d6bb246d84d94d979ec064393b513, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
