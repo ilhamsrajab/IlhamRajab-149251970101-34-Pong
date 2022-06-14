@@ -5,6 +5,7 @@ ID Registrasi : 149251970101-34 <br>
 
 ## Pong-like Game
 
+<img align="center" src="Assets\Images\mainmenu.png">
 <img align="center" src="Assets\Images\pong-like-game.png">
 
 ## Changelog
