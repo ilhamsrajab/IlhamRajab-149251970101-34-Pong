@@ -9,6 +9,13 @@ ID Registrasi : 149251970101-34 <br>
 
 ## Changelog
 
+### 15/06/2022
+
+- Add PowerUp feature : <b>SpeedUp!</b>🔥🔥🔥
+- Fix ball speed when 'goal'
+- Ball now smaller
+- Fix screen scaler, now with <b>Scale with Screen Size</b>
+
 ### 09/06/2022
 
 - Add MainMenu scene
