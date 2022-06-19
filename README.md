@@ -12,7 +12,7 @@ ID Registrasi : 149251970101-34 <br>
 
 ### 18/06/2022
 
-- Add "back to main menu" to main menu
+- Add "back to main menu" button
 - Add Credit Scene
 
 ### 15/06/2022
