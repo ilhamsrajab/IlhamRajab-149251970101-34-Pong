@@ -10,6 +10,11 @@ ID Registrasi : 149251970101-34 <br>
 
 ## Changelog
 
+### 20/06/2022
+
+- Add PowerUp feature : <b>Expand Paddle!</b>🔥🔥🔥
+- Add PowerUp feature : <b>Paddle SpeedUp!</b>🔥🔥🔥
+
 ### 18/06/2022
 
 - Add "back to main menu" button
@@ -17,7 +22,7 @@ ID Registrasi : 149251970101-34 <br>
 
 ### 15/06/2022
 
-- Add PowerUp feature : <b>SpeedUp!</b>🔥🔥🔥
+- Add PowerUp feature : <b>SpeedUp Ball!</b>🔥🔥🔥
 - Fix ball speed when 'goal'
 - Ball now smaller
 - Fix screen scaler, now with <b>Scale with Screen Size</b>

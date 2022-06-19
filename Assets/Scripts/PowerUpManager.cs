@@ -12,7 +12,7 @@ public class PowerUpManager : MonoBehaviour
   public Vector2 powerUpAreaMax;
   public List<GameObject> powerUpTemplateList;
   private float timer;
-  private float timer2;
+  private float timerHapus;
   private List<GameObject> powerUpList;
 
 
@@ -21,12 +21,13 @@ public class PowerUpManager : MonoBehaviour
   {
     powerUpList = new List<GameObject>();
     timer = 0;
+    timerHapus = 0;
   }
 
   private void Update()
   {
     timer += Time.deltaTime;
-    timer2 += Time.deltaTime;
+    timerHapus += Time.deltaTime;
 
     if (timer > spawnInterval)
     {
@@ -34,10 +35,10 @@ public class PowerUpManager : MonoBehaviour
       timer -= spawnInterval;
     }
 
-    if (timer2 > removeSpawnInterval)
+    if (timerHapus > removeSpawnInterval && powerUpList.Count >= maxPowerUpAmount)
     {
       RemovePowerUp(powerUpList[0]);
-      timer2 -= removeSpawnInterval;
+      timerHapus -= removeSpawnInterval;
     }
   }
 

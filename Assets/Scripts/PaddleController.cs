@@ -41,8 +41,19 @@ public class PaddleController : MonoBehaviour
   private void MoveObject(Vector2 movement)
   {
     // debug kecepatan paddle
-    Debug.Log("Kecepatan paddle : " + movement);
+    // Debug.Log("Kecepatan paddle : " + movement);
 
     rig.velocity = movement;
   }
+
+  // public void ActivatePUExtend(float effect)
+  // {
+  //   rig.transform.localScale *= new Vector2(1, effect);
+  // }
+  // public void DeactivatePUExtend(float effect)
+  // {
+  //   rig.transform.localScale = new Vector2(1, 2);
+
+  // }
+
 }
