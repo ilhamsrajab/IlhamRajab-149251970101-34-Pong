@@ -5,6 +5,7 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
   public float speed;
+  public float speedReset;
   public KeyCode upKey;
   public KeyCode downKey;
   private Rigidbody2D rig;
@@ -58,6 +59,6 @@ public class PaddleController : MonoBehaviour
   }
   public void DeactivatePUSpeedUp(float effect)
   {
-    speed /= effect;
+    speed = speedReset;
   }
 }

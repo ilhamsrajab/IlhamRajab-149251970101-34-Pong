@@ -14,6 +14,7 @@ ID Registrasi : 149251970101-34 <br>
 
 - Add PowerUp feature : <b>Expand Paddle!</b>🔥🔥🔥
 - Add PowerUp feature : <b>Paddle SpeedUp!</b>🔥🔥🔥
+- Edit Spawn PowerUp for 7s
 
 ### 18/06/2022
 

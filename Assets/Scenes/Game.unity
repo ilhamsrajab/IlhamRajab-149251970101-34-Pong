@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 235852493}
   m_Layer: 0
   m_Name: Paddle Kiri
-  m_TagString: PaddleKiri
+  m_TagString: Paddle Kiri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  speedReset: 5
   upKey: 119
   downKey: 115
 --- !u!50 &235852492
@@ -698,7 +699,7 @@ GameObject:
   - component: {fileID: 452488331}
   m_Layer: 0
   m_Name: Tembok Bawah
-  m_TagString: Untagged
+  m_TagString: Tembok
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +803,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452488327}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
@@ -1074,7 +1075,7 @@ GameObject:
   - component: {fileID: 651058302}
   m_Layer: 0
   m_Name: Paddle Kanan
-  m_TagString: PaddleKanan
+  m_TagString: Paddle Kanan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1157,6 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  speedReset: 5
   upKey: 273
   downKey: 274
 --- !u!50 &651058301
@@ -1458,9 +1460,10 @@ GameObject:
   - component: {fileID: 1101785372}
   - component: {fileID: 1101785371}
   - component: {fileID: 1101785373}
+  - component: {fileID: 1101785374}
   m_Layer: 0
   m_Name: Tembok Atas
-  m_TagString: Untagged
+  m_TagString: Tembok
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,6 +1559,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1101785374
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101785370}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1284243564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1733,7 @@ MonoBehaviour:
   speed: {x: 6, y: 0}
   resetPosition: {x: 0, y: 0}
   lastCollision: 
+  sentuhPaddle: 
   PaddleName: 
 --- !u!212 &1374526395
 SpriteRenderer:
@@ -2182,7 +2207,7 @@ MonoBehaviour:
   ballController: {fileID: 1374526394}
   manager: {fileID: 1789742799}
   effect: 2
-  Duration: 5
+  Duration: 0
   resetScaleX: 0.2
   resetScaleY: 2
 --- !u!212 &1500032059
@@ -2301,12 +2326,12 @@ MonoBehaviour:
   spawnInterval: 7
   removeSpawnInterval: 15
   maxPowerUpAmount: 2
-  powerUpAreaMin: {x: -7, y: -3.5}
-  powerUpAreaMax: {x: 7, y: 3.5}
+  powerUpAreaMin: {x: -7, y: -3.25}
+  powerUpAreaMax: {x: 7, y: 3.25}
   powerUpTemplateList:
   - {fileID: 1456497892}
-  - {fileID: 1480466524}
   - {fileID: 1500032055}
+  - {fileID: 1480466524}
 --- !u!1 &1984301418
 GameObject:
   m_ObjectHideFlags: 0

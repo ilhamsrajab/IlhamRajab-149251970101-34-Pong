@@ -15,7 +15,7 @@ public class PUSpeedUpPaddleController : MonoBehaviour
 
   private void Start()
   {
-    isSpeedUp = false;
+    isSpeedUp = true;
   }
 
   private void Update()
@@ -38,15 +38,14 @@ public class PUSpeedUpPaddleController : MonoBehaviour
   {
     if (collision == ball)
     {
-      namaPaddle = GameObject.Find(ballController.PaddleName);
+      namaPaddle = GameObject.Find(ballController.sentuhPaddle);
 
       namaPaddle.GetComponent<PaddleController>().ActivatePUSpeedUp(effect);
 
-      Debug.Log("Power Up Speed Up " + namaPaddle);
+      // Debug.Log("Power Up Speed Up " + namaPaddle);
       timerSpeedUp = 0;
 
       isSpeedUp = true;
-      Debug.Log("is SpeedUp " + isSpeedUp);
 
       manager.RemovePowerUp(gameObject);
     }
@@ -54,10 +53,10 @@ public class PUSpeedUpPaddleController : MonoBehaviour
 
   private void DeactivePUSpeedUp()
   {
-    namaPaddle = GameObject.Find(ballController.PaddleName);
+    namaPaddle = GameObject.Find(ballController.sentuhPaddle);
 
     namaPaddle.GetComponent<PaddleController>().DeactivatePUSpeedUp(effect);
-    Debug.Log("Power Up Speed Up " + namaPaddle + " Habis");
+    // Debug.Log("Power Up Speed Up " + namaPaddle + " Habis");
 
     isSpeedUp = false;
   }

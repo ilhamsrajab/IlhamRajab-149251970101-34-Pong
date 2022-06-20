@@ -7,6 +7,7 @@ public class BallController : MonoBehaviour
   public Vector2 speed;
   public Vector2 resetPosition;
   public string lastCollision;
+  public string sentuhPaddle;
   public string PaddleName;
   private Rigidbody2D rig;
 
@@ -28,14 +29,21 @@ public class BallController : MonoBehaviour
     Debug.Log(speed);
   }
 
-  private void OnCollisionEnter2D(Collision2D collisionInfo)
+  // deteksi bola bersentuhan terakhir
+  private void OnCollisionEnter2D(Collision2D collision)
   {
-    lastCollision = collisionInfo.collider.tag;
-    PaddleName = collisionInfo.collider.name;
+    lastCollision = collision.collider.tag;
+    PaddleName = collision.collider.name;
 
-    if (lastCollision == "PaddleKanan")
+    if (lastCollision == "Paddle Kanan" || lastCollision == "Paddle Kiri")
     {
-      // Debug.Log(PaddleName + " menyentuh bola");
+      // hanya membaca sentuhan/touch dari paddle bukan tembok
+      sentuhPaddle = lastCollision;
+      Debug.Log(lastCollision + " menyentuh bola");
+    }
+    else
+    {
+      // Debug.Log("Objek lain menyentuh bola");
     }
   }
 }

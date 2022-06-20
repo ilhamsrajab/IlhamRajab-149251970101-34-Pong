@@ -17,7 +17,7 @@ public class PUExtendController : MonoBehaviour
 
   private void Start()
   {
-    isExtend = false;
+    isExtend = true;
   }
 
   private void Update()
@@ -40,11 +40,11 @@ public class PUExtendController : MonoBehaviour
   {
     if (collision == ball)
     {
-      namaPaddle = GameObject.Find(ballController.PaddleName);
+      namaPaddle = GameObject.Find(ballController.sentuhPaddle);
 
       namaPaddle.GetComponent<PaddleController>().ActivatePUExtend(effect);
 
-      Debug.Log("Power Up Extend " + namaPaddle);
+      // Debug.Log("Power Up Extend " + namaPaddle);
 
       isExtend = true;
 
@@ -54,10 +54,10 @@ public class PUExtendController : MonoBehaviour
 
   private void DeactivePUExtend()
   {
-    namaPaddle = GameObject.Find(ballController.PaddleName);
+    namaPaddle = GameObject.Find(ballController.sentuhPaddle);
 
     namaPaddle.GetComponent<PaddleController>().transform.localScale = new Vector2(resetScaleX, resetScaleY);
-    Debug.Log("Power Up Extend " + namaPaddle + " Habis");
+    // Debug.Log("Power Up Extend " + namaPaddle + " Habis");
 
     isExtend = false;
   }
