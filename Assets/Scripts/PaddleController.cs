@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
-  public int speed;
+  public float speed;
   public KeyCode upKey;
   public KeyCode downKey;
   private Rigidbody2D rig;
@@ -46,14 +46,18 @@ public class PaddleController : MonoBehaviour
     rig.velocity = movement;
   }
 
-  // public void ActivatePUExtend(float effect)
-  // {
-  //   rig.transform.localScale *= new Vector2(1, effect);
-  // }
-  // public void DeactivatePUExtend(float effect)
-  // {
-  //   rig.transform.localScale = new Vector2(1, 2);
+  public void ActivatePUExtend(float effect)
+  {
+    rig.transform.localScale *= new Vector2(1, effect);
+  }
 
-  // }
+  public void ActivatePUSpeedUp(float effect)
+  {
+    speed *= effect;
 
+  }
+  public void DeactivatePUSpeedUp(float effect)
+  {
+    speed /= effect;
+  }
 }

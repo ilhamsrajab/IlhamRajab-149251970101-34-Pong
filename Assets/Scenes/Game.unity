@@ -281,8 +281,8 @@ GameObject:
   - component: {fileID: 235852492}
   - component: {fileID: 235852493}
   m_Layer: 0
-  m_Name: Padlde Kiri
-  m_TagString: Untagged
+  m_Name: Paddle Kiri
+  m_TagString: PaddleKiri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1073,8 +1073,8 @@ GameObject:
   - component: {fileID: 651058301}
   - component: {fileID: 651058302}
   m_Layer: 0
-  m_Name: Padlde Kanan
-  m_TagString: Untagged
+  m_Name: Paddle Kanan
+  m_TagString: PaddleKanan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1443,6 +1443,7 @@ Transform:
   m_Children:
   - {fileID: 1480466525}
   - {fileID: 1500032056}
+  - {fileID: 1456497893}
   m_Father: {fileID: 1789742798}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1707,6 +1708,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 6, y: 0}
   resetPosition: {x: 0, y: 0}
+  lastCollision: 
+  PaddleName: 
 --- !u!212 &1374526395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1809,6 +1812,123 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1 &1456497892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456497893}
+  - component: {fileID: 1456497896}
+  - component: {fileID: 1456497895}
+  - component: {fileID: 1456497894}
+  m_Layer: 0
+  m_Name: SpeedUpPaddle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1456497893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456497892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1085431497}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456497894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456497892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089900ce1e486fd48ad6a6ced1e2207e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 1374526398}
+  ballController: {fileID: 1374526394}
+  manager: {fileID: 1789742799}
+  effect: 2
+  Duration: 5
+--- !u!58 &1456497895
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456497892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &1456497896
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456497892}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1480466524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1942,7 @@ GameObject:
   - component: {fileID: 1480466528}
   - component: {fileID: 1480466526}
   m_Layer: 0
-  m_Name: SpeedUp
+  m_Name: SpeedUpBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2059,12 +2179,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1374526398}
-  paddleKanan: {fileID: 651058300}
-  paddleKiri: {fileID: 235852491}
-  isRight: 0
-  effect: 2
+  ballController: {fileID: 1374526394}
   manager: {fileID: 1789742799}
+  effect: 2
   Duration: 5
+  resetScaleX: 0.2
+  resetScaleY: 2
 --- !u!212 &1500032059
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2178,12 +2298,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 114202693}
-  spawnInterval: 5
+  spawnInterval: 7
   removeSpawnInterval: 15
   maxPowerUpAmount: 2
-  powerUpAreaMin: {x: -7, y: 0}
-  powerUpAreaMax: {x: 7, y: 0}
+  powerUpAreaMin: {x: -7, y: -3.5}
+  powerUpAreaMax: {x: 7, y: 3.5}
   powerUpTemplateList:
+  - {fileID: 1456497892}
+  - {fileID: 1480466524}
   - {fileID: 1500032055}
 --- !u!1 &1984301418
 GameObject:

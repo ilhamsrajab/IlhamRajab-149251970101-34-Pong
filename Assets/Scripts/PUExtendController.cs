@@ -5,43 +5,33 @@ using UnityEngine;
 public class PUExtendController : MonoBehaviour
 {
   public Collider2D ball;
-  public PaddleController paddleKanan;
-  public PaddleController paddleKiri;
-  public bool isRight;
-  public float effect;
+  public BallController ballController;
   public PowerUpManager manager;
+  public float effect;
   public int Duration;
+  public float resetScaleX;
+  public float resetScaleY;
   private float timerExtend;
   private bool isExtend;
+  private GameObject namaPaddle;
 
   private void Start()
   {
-    timerExtend = 0;
+    isExtend = false;
   }
 
   private void Update()
   {
-    timerExtend += Time.deltaTime;
-
-    if (timerExtend > Duration)
+    if (isExtend == true)
     {
-      if (isRight)
+      if (timerExtend >= 0)
       {
-        paddleKanan.GetComponent<PaddleController>().transform.localScale = new Vector2(.2f, 2);
-        timerExtend -= Duration;
-        Debug.Log("Power Up Extend Paddle Kanan Habis");
-
-        isExtend = false;
-        Debug.Log(isExtend);
+        timerExtend -= Time.deltaTime;
       }
       else
       {
-        paddleKiri.GetComponent<PaddleController>().transform.localScale = new Vector2(.2f, 2);
-        timerExtend -= Duration;
-        Debug.Log("Power Up Extend Paddle Kiri Habis");
-
-        isExtend = false;
-        Debug.Log(isExtend);
+        DeactivePUExtend();
+        timerExtend = 0;
       }
     }
   }
@@ -50,29 +40,25 @@ public class PUExtendController : MonoBehaviour
   {
     if (collision == ball)
     {
-      if (isRight)
-      {
-        paddleKanan.GetComponent<PaddleController>().transform.localScale *= new Vector2(1, effect);
-        // paddleKanan.GetComponent<PaddleController>().ActivatePUExtend(effect);
-        Debug.Log("Power Up Extend Paddle Kanan");
+      namaPaddle = GameObject.Find(ballController.PaddleName);
 
-        isExtend = true;
-        Debug.Log(isExtend);
+      namaPaddle.GetComponent<PaddleController>().ActivatePUExtend(effect);
 
-        manager.RemovePowerUp(gameObject);
+      Debug.Log("Power Up Extend " + namaPaddle);
 
-      }
-      else
-      {
-        paddleKiri.GetComponent<PaddleController>().transform.localScale *= new Vector2(1, effect);
-        // paddleKiri.GetComponent<PaddleController>().ActivatePUExtend(effect);
-        Debug.Log("Power Up Extend Paddle Kiri");
+      isExtend = true;
 
-        isExtend = true;
-        Debug.Log(isExtend);
-
-        manager.RemovePowerUp(gameObject);
-      }
+      manager.RemovePowerUp(gameObject);
     }
+  }
+
+  private void DeactivePUExtend()
+  {
+    namaPaddle = GameObject.Find(ballController.PaddleName);
+
+    namaPaddle.GetComponent<PaddleController>().transform.localScale = new Vector2(resetScaleX, resetScaleY);
+    Debug.Log("Power Up Extend " + namaPaddle + " Habis");
+
+    isExtend = false;
   }
 }

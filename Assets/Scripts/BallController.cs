@@ -6,7 +6,10 @@ public class BallController : MonoBehaviour
 {
   public Vector2 speed;
   public Vector2 resetPosition;
+  public string lastCollision;
+  public string PaddleName;
   private Rigidbody2D rig;
+
   private void Start()
   {
     rig = GetComponent<Rigidbody2D>();
@@ -25,14 +28,14 @@ public class BallController : MonoBehaviour
     Debug.Log(speed);
   }
 
-  // private void OnCollisionEnter2D(Collision2D collisionInfo)
-  // {
-  //   string lastCollision = collisionInfo.collider.tag;
-  //   string name = collisionInfo.collider.name;
+  private void OnCollisionEnter2D(Collision2D collisionInfo)
+  {
+    lastCollision = collisionInfo.collider.tag;
+    PaddleName = collisionInfo.collider.name;
 
-  //   if (lastCollision == "PaddleKanan")
-  //   {
-  //     // isRight = true;
-  //   }
-  // }
+    if (lastCollision == "PaddleKanan")
+    {
+      // Debug.Log(PaddleName + " menyentuh bola");
+    }
+  }
 }
