@@ -13,8 +13,10 @@ public class MainMenuController : MonoBehaviour
     Debug.Log("Created by Ilham Syahidatul Rajab - 149251970101-34 | DTS FGA Agate - Game Programming");
   }
 
-  public void OpenAuthor()
+  public void Credit()
   {
+    SceneManager.LoadScene("Credit");
+
     // muncul author di console log
     Debug.Log("Created by Ilham Syahidatul Rajab - 149251970101-34 | DTS FGA Agate - Game Programming");
   }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
@@ -14,5 +15,10 @@ public class ScoreController : MonoBehaviour
   {
     skorKiri.text = manager.leftScore.ToString();
     skorKanan.text = manager.rightScore.ToString();
+  }
+
+  public void MainMenuButton()
+  {
+    SceneManager.LoadScene("MainMenu");
   }
 }
