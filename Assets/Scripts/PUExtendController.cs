@@ -22,16 +22,30 @@ public class PUExtendController : MonoBehaviour
   private void Update()
   {
     timerExtend += Time.deltaTime;
-    Debug.Log(timerExtend);
 
     if (timerExtend > Duration)
     {
-      DeactivatePUExtend(gameObject);
-      timerExtend -= Duration;
+      if (isRight)
+      {
+        paddleKanan.GetComponent<PaddleController>().transform.localScale = new Vector2(.2f, 2);
+        timerExtend -= Duration;
+        Debug.Log("Power Up Extend Paddle Kanan Habis");
 
-      isExtend = false;
+        isExtend = false;
+        Debug.Log(isExtend);
+      }
+      else
+      {
+        paddleKiri.GetComponent<PaddleController>().transform.localScale = new Vector2(.2f, 2);
+        timerExtend -= Duration;
+        Debug.Log("Power Up Extend Paddle Kiri Habis");
+
+        isExtend = false;
+        Debug.Log(isExtend);
+      }
     }
   }
+
   private void OnTriggerEnter2D(Collider2D collision)
   {
     if (collision == ball)
@@ -41,6 +55,7 @@ public class PUExtendController : MonoBehaviour
         paddleKanan.GetComponent<PaddleController>().transform.localScale *= new Vector2(1, effect);
         // paddleKanan.GetComponent<PaddleController>().ActivatePUExtend(effect);
         Debug.Log("Power Up Extend Paddle Kanan");
+
         isExtend = true;
         Debug.Log(isExtend);
 
@@ -52,6 +67,7 @@ public class PUExtendController : MonoBehaviour
         paddleKiri.GetComponent<PaddleController>().transform.localScale *= new Vector2(1, effect);
         // paddleKiri.GetComponent<PaddleController>().ActivatePUExtend(effect);
         Debug.Log("Power Up Extend Paddle Kiri");
+
         isExtend = true;
         Debug.Log(isExtend);
 
@@ -59,12 +75,4 @@ public class PUExtendController : MonoBehaviour
       }
     }
   }
-  private void DeactivatePUExtend(GameObject paddle)
-  {
-    paddle.GetComponent<PaddleController>().transform.localScale = new Vector2(.2f, 2);
-    Debug.Log("Power Up Extend Paddle Sudah Habis");
-
-    isExtend = false;
-  }
-
 }

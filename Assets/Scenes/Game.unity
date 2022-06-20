@@ -2061,7 +2061,7 @@ MonoBehaviour:
   ball: {fileID: 1374526398}
   paddleKanan: {fileID: 651058300}
   paddleKiri: {fileID: 235852491}
-  isRight: 1
+  isRight: 0
   effect: 2
   manager: {fileID: 1789742799}
   Duration: 5

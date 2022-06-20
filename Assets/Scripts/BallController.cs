@@ -22,5 +22,17 @@ public class BallController : MonoBehaviour
   public void ActivatePUSpeedUp(float magnitude)
   {
     rig.velocity *= magnitude;
+    Debug.Log(speed);
   }
+
+  // private void OnCollisionEnter2D(Collision2D collisionInfo)
+  // {
+  //   string lastCollision = collisionInfo.collider.tag;
+  //   string name = collisionInfo.collider.name;
+
+  //   if (lastCollision == "PaddleKanan")
+  //   {
+  //     // isRight = true;
+  //   }
+  // }
 }
